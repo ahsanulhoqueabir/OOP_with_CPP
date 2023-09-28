@@ -4,7 +4,7 @@ Taking the initiative to solve both the discussed and given homework problems by
 <h1> Here i write codes in chronologically </h1> 
 <p > Take input from administrator of a students name and 5 subjects number,then print each of the students CGPA. Do this using CPP's class variable</p>
 
-<code>
+```
 #include<bits/stdc++.h>
 using namespace std;
 int mx=0;
