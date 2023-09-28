@@ -1,16 +1,16 @@
 # OOP_with_CPP
 Taking the initiative to solve both the discussed and given homework problems by Aminul sir and the solutions to previous year's question papers is an essential aspect of my learning journey.
 <div>
-<style>
+<!-- <style>
     .para
     {
         color: teal;
         font-size: 15px;
     }
-</style>
+</style> -->
 <h1> Here i write codes in chronologically </h1> 
 
-<p class="para"> Take input from administrator of a students name and 5 subjects number,then print each of the students CGPA. Do this using CPP's class variable</p>
+<p class="para" style="color:DodgerBlue;"> Take input from administrator of a students name and 5 subjects number,then print each of the students CGPA. Do this using CPP's class variable</p>
 
 <code>
 #include<bits/stdc++.h>
