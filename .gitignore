@@ -1,3 +1,4 @@
 .cph
-.html
-.js
+*.html
+*.js
+*.exe
