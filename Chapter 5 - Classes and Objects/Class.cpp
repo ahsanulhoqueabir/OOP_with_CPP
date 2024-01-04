@@ -12,15 +12,14 @@ public:
     string name;
     int age;
 
-    void getType1(string a, string b, string c, int d) 
+    void getType1(string a, string b, string c, int d) // if the property name and parameter names are different,then you can assigned data this way!
     {
-
         nid = a;
         BankAcc = b;
         name = c;
         age = d;
     }
-    void getType2(string nid, string BankAcc, string name, int age)
+    void getType2(string nid, string BankAcc, string name, int age) // if you are not sured to matching of parameter and property name, then this way is best.
     {
 
         this->nid = nid;
@@ -28,7 +27,7 @@ public:
         this->name = name;
         this->age = age;
     }
-    void getType3()
+    void getType3() // it's the ingeneral brute force way
     {
         cout << "Enter NID : ";
         // getchar();
