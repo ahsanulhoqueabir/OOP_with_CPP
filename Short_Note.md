@@ -19,7 +19,9 @@ public:
 };
 
 ```
+
 - **Parameterized Constructor**: This constructor takes parameters, allowing you to initialize the object with specific values.
+
 ```
 class Point {
 private:
@@ -35,7 +37,9 @@ public:
 
 
 ```
+
 - **Copy Constructor**: This constructor is used to create a new object as a copy of an existing object.
+
 ```
 class Car {
 private:
@@ -51,7 +55,6 @@ public:
 ```
 
 </details>
-
 
 ## Abstraction
 
@@ -75,7 +78,6 @@ public:
 <li> Hybrid - Combination of single and multiple inheritance.</li>
 </ol>
 
-
 ## Polymorphism
 
 <li> The ability of different classes to be treated as objects of a common superclass.
@@ -83,6 +85,7 @@ public:
 <li> Example:cpp
 
 There have two types of polymorphism:
+
 1. Compile Time Polymorphism:
 <pre><code>
 Animal cat = new Cat(); //Compile time polymorphism
@@ -108,9 +111,8 @@ Animal obj = new Dog();
 obj.sound(); // Output : Dog Barking
 ((Dog)obj).sound(); // Output : Dog Barking
 </code></pre>
- 
 
- ## Structure in C and C++
+## Structure in C and C++
 
   <table>
       <small>Structure in C and C++</small>
@@ -140,17 +142,27 @@ obj.sound(); // Output : Dog Barking
         <tr>
           <td>
             Writing the ``struct`` keyword is necessary to declare structure-type variables.
-            ```
-            // declare a variable:
-                struct structName a;
-            ```
+           <details>
+      <summary>Example</summary>
+      <pre>
+        <code>
+          // declare a variable: 
+          struct structName a;
+        </code>
+      </pre>
+    </details>
           </td>
           <td>
             Writing the ‘struct’ keyword is not necessary to declare structure-type variables.
-              ```
-            // declare a variable:
-                structName a;
-            ```
+           <details>
+      <summary>Example</summary>
+      <pre>
+        <code>
+          // declare a variable: 
+        structName a;
+        </code>
+      </pre>
+    </details>
           </td>
         </tr>
         <tr>
