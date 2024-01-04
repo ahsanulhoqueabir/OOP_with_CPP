@@ -141,7 +141,7 @@ obj.sound(); // Output : Dog Barking
         </tr>
         <tr>
           <td>
-            Writing the ``struct`` keyword is necessary to declare structure-type variables.
+            Writing the <code>struct</code> keyword is necessary to declare structure-type variables.
            <details>
       <summary>Example</summary>
       <pre>
@@ -153,7 +153,7 @@ obj.sound(); // Output : Dog Barking
     </details>
           </td>
           <td>
-            Writing the ‘struct’ keyword is not necessary to declare structure-type variables.
+            Writing the <code>struct</code> keyword is not necessary to declare structure-type variables.
            <details>
       <summary>Example</summary>
       <pre>
@@ -183,3 +183,6 @@ obj.sound(); // Output : Dog Barking
         </tr>
       </tbody>
     </table>
+
+    >[!NOTE]
+    > Now,C++ programmers tend to use the structures for holding data and classes to hold both the data and funtions.
