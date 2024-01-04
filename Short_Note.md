@@ -1,5 +1,58 @@
 # Short Note
 
+## Constructor
+
+In C++, a constructor is a special member function that is automatically called when an object of a class is created. Its main purpose is to initialize the object's data members and perform any necessary setup for the object. Constructors have the same name as the class and do not have a return type.
+
+<details>
+<summary> Show the types of Contructor </summary>
+
+- **Default constructor**: It is a special type of constructor that doesn't take any arguments. When we create an object without passing any argument to it, then this constructor will be called by default.
+
+```
+class MyClass {
+public:
+    // Default Constructor
+    MyClass() {
+        // Initialization code goes here
+    }
+};
+
+```
+- **Parameterized Constructor**: This constructor takes parameters, allowing you to initialize the object with specific values.
+```
+class Point {
+private:
+    int x, y;
+
+public:
+    // Parameterized Constructor
+    Point(int initialX, int initialY) {
+        x = initialX;
+        y = initialY;
+    }
+};
+
+
+```
+- **Copy Constructor**: This constructor is used to create a new object as a copy of an existing object.
+```
+class Car {
+private:
+    int speed;
+
+public:
+    // Copy Constructor
+    Car(const Car& otherCar) {
+        speed = otherCar.speed;
+    }
+};
+
+```
+
+</details>
+
+
 ## Abstraction
 
 <ul>
@@ -56,3 +109,59 @@ obj.sound(); // Output : Dog Barking
 ((Dog)obj).sound(); // Output : Dog Barking
 </code></pre>
  
+
+ ## Structure in C and C++
+
+  <table>
+      <small>Structure in C and C++</small>
+      <thead>
+        <td><strong>C Structures</strong></td>
+        <td><strong>C++ Structures</strong></td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Only data members are allowed, it cannot have member functions.
+          </td>
+          <td>Can hold both: member functions and data members.</td>
+        </tr>
+        <tr>
+          <td>Cannot have static members.</td>
+          <td>Can have static members.</td>
+        </tr>
+        <tr>
+          <td>Cannot have a constructor inside a structure.</td>
+          <td>Constructor creation is allowed.</td>
+        </tr>
+        <tr>
+          <td>Direct Initialization of data members is not possible.</td>
+          <td>Direct Initialization of data members is possible.</td>
+        </tr>
+        <tr>
+          <td>
+            Writing the ‘struct’ keyword is necessary to declare structure-type
+            variables.
+          </td>
+          <td>
+            Writing the ‘struct’ keyword is not necessary to declare
+            structure-type variables.
+          </td>
+        </tr>
+        <tr>
+          <td>Do not have access modifiers.</td>
+          <td>Supports access modifiers.</td>
+        </tr>
+        <tr>
+          <td>Only pointers to structs are allowed.</td>
+          <td>Can have both pointers and references to the struct.</td>
+        </tr>
+        <tr>
+          <td>Sizeof operator will generate 0 for an empty structure.</td>
+          <td>Sizeof operator will generate 1 for an empty structure.</td>
+        </tr>
+        <tr>
+          <td>Data Hiding is not possible.</td>
+          <td>Data Hiding is possible.</td>
+        </tr>
+      </tbody>
+    </table>
