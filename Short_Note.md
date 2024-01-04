@@ -5,7 +5,7 @@
 In C++, a constructor is a special member function that is automatically called when an object of a class is created. Its main purpose is to initialize the object's data members and perform any necessary setup for the object. Constructors have the same name as the class and do not have a return type.
 
 <details>
-<summary> Show the types of Contructor </summary>
+<summary> Show the types of Constructor </summary>
 
 - **Default constructor**: It is a special type of constructor that doesn't take any arguments. When we create an object without passing any argument to it, then this constructor will be called by default.
 
@@ -139,12 +139,18 @@ obj.sound(); // Output : Dog Barking
         </tr>
         <tr>
           <td>
-            Writing the ‘struct’ keyword is necessary to declare structure-type
-            variables.
+            Writing the ``struct`` keyword is necessary to declare structure-type variables.
+            ```
+            // declare a variable:
+                struct structName a;
+            ```
           </td>
           <td>
-            Writing the ‘struct’ keyword is not necessary to declare
-            structure-type variables.
+            Writing the ‘struct’ keyword is not necessary to declare structure-type variables.
+              ```
+            // declare a variable:
+                structName a;
+            ```
           </td>
         </tr>
         <tr>
