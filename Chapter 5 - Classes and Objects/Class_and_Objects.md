@@ -72,11 +72,9 @@
       </tbody>
 </table>
 
-
 > [!NOTE]
 > Now,C++ programmers tend to use the structures for holding data and classes to hold both the data and funtions.
 > by default all memebers of class is private wherease members of structure are public.
-
 
 ### 5.3 Specifying a Class
 
@@ -85,9 +83,10 @@
 3. Member function called method, which can perform some operation on object's attribute.
 4. Member variable called attribute, which holds value related to object.
 5. Class specification has 2 parts.
-    - Class declaration
-    - Class function definition
+   - Class declaration
+   - Class function definition
 6. Example:
+
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -146,12 +145,12 @@ public:
 int main()
 {
     User user1,user2,user3; //create 3 user user1,user2 and user3
-    // take input 
+    // take input
     user1.getType1("1524210305040", "IFIC293862348512", "Ahsanul Hoque", 23);
     user2.getType2("9125488522455", "BCB28951435751", "Amanul Hoque", 31);
     user3.getType3();
 
-    // display data 
+    // display data
     user1.display(); dash
     user2.display(); dash
     user3.display();
@@ -161,17 +160,17 @@ int main()
 
 ```
 
-
 ### 5.4 Defining Member Functions
 
 - Several different classes can use same function name. to resolve their scope we justify 'membership label'.
 - Member Function can access private data of class.
 - A member function can call another member function directly.
 - Member function can be defined in two places.
-    - Outside the clsss definition
-    - Inside the class definition
+  - Outside the clsss definition
+  - Inside the class definition
 
 #### Definition outside of the class
+
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -185,13 +184,13 @@ public:
     string dept;
     string uni;
 
-// declare functions 
+// declare functions
      void getinfo(string name, int age, string id, string dept, string uni);
-     void displayInfo(void); // As display function dont take any parameter thats why we gave void as default,even doesn't matter it.  
+     void displayInfo(void); // As display function dont take any parameter thats why we gave void as default,even doesn't matter it.
 
 };
 
-// defining the functions 
+// defining the functions
 void student::getinfo(string name, int age, string id, string dept, string uni){  // here used :: is called scope resolution operator
     this->name = name;
     this->age = age;
@@ -217,6 +216,7 @@ int main()
 ```
 
 #### Defination inside of the class
+
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -271,56 +271,81 @@ An inline function is one for which the compiler copies the code from the functi
 <summary>Example</summary>
 
 ```
-          #include<bits/stdc++.h>
-          using namespace std; 
-          
-          
-          class Average{
-              public:
-              float a,b;
-              void getdata(float x, float y);
-              void display(){
-                  cout << "Average : " << ((a+b)/2) << endl;
-              }
-          };
+#include<bits/stdc++.h>
+using namespace std;
 
-          inline void Average::getdata(float x, float y){
-              a = x;
-              b = y;
-          }
 
-          int main()
-          {
-              Average calc;
-              calc.getdata(10,21);
-              calc.display();
-              return 0;
-          }
+class Average{
+    public:
+    float a,b;
+    void getdata(float x, float y);
+    void display(){
+        cout << "Average : " << ((a+b)/2) << endl;
+    }
+};
+
+inline void Average::getdata(float x, float y){
+    a = x;
+    b = y;
+}
+
+int main()
+  {
+      Average calc;
+      calc.getdata(10,21);
+      calc.display();
+      return 0;
+  }
 ```
+
 In the above example <code> `void display()` </code> is made as an inline function because it contains simple operations
+
 </details>
 
 
+### 5.7 Nesting of Member Functions
+
+- In C++, member functions can be nested inside another member function or outside the class definition.
+- If they are nested, then control goes to that inner member function when called from outer one and comes back once execution is done.
+- The scope of variables in nested member functions is limited only within them. They cannot access any variable
+- The scope of variables in nested member functions is limited only within them.
+
+<details>
+<summary> Example </summary>
 
 
+```
+#include<bits/stdc++.h>
+using namespace std;
 
+class collection{
+    public:
+    float x,y,z;
 
+    void input();
+    float average();
+    void display();
+};
 
+// defining functions 
+void collection::input(){
+    cout << "Enter three numbers : ";
+    cin >> x >> y >> z;
+}
+float collection::average(){
+   return ((x+y+z)/3);
+}
+void collection::display(){ // in this function we call another function  of this class
+    cout << "Average of " << x << " " <<  y << " " << z << " is: " << average() << endl;
+}
 
+int main()
+{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    collection p; // create new object
+    p.input();
+    p.display();
+    return 0;
+}
+```
+</details>
