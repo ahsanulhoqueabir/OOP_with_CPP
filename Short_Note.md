@@ -20,7 +20,7 @@
 <li> Multiple - A single class can have multiple parents.</li>
 <li> Multilevel - A class has more than one parent, but each child is derived from only one parent.</li>
 <li> Hybrid - Combination of single and multiple inheritance.</li>
-<ol>
+</ol>
 
 
 ## Polymorphism
