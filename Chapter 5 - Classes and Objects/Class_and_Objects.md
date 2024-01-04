@@ -269,6 +269,7 @@ An inline function is one for which the compiler copies the code from the functi
 
 <details>
 <summary>Example</summary>
+
 ```
           #include<bits/stdc++.h>
           using namespace std; 
@@ -296,6 +297,7 @@ An inline function is one for which the compiler copies the code from the functi
               return 0;
           }
 ```
+In the above example <code> `void display()` </code> is made as an inline function because it contains simple operations
 </details>
 
 
