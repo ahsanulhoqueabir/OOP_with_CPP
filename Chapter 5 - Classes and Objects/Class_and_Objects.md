@@ -145,7 +145,7 @@ public:
 
 int main()
 {
-    User user1,user2,user3;
+    User user1,user2,user3; //create 3 user user1,user2 and user3
     // take input 
     user1.getType1("1524210305040", "IFIC293862348512", "Ahsanul Hoque", 23);
     user2.getType2("9125488522455", "BCB28951435751", "Amanul Hoque", 31);
@@ -258,6 +258,45 @@ int main()
     return 0;
 }
 ```
+
+### 5.6 Function Inline
+
+<div>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221229112934/Inline-Function-in-Cpp.png" alt="">
+</div>
+
+An inline function is one for which the compiler copies the code from the function definition directly into the code of the calling function rather than creating a separate set of instructions in memory. Its good only for short function.
+
+<details>
+<summary> Example </summary>
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+class Average{
+    public:
+    float a,b;
+
+    void getdata(float x, float y);
+    void display(){
+        cout << "Average : " << ((a+b)/2) << endl;
+    }
+};
+
+inline void Average::getdata(float x, float y){
+    a = x;
+    b = y;
+}
+
+int main()
+{
+    Average calc;
+    calc.getdata(10,21);
+    calc.display();
+    return 0;
+}
+```
+</details>
 
 
 
