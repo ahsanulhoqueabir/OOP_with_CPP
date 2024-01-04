@@ -221,9 +221,7 @@ int main()
 </pre>
 
 #### Defination inside of the class
-
-<pre>
-<code>
+```
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -263,9 +261,7 @@ int main()
     abir.displayInfo();
     return 0;
 }
-
-</code>
-</pre>
+```
 
 
 
