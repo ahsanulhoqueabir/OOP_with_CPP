@@ -184,5 +184,6 @@ obj.sound(); // Output : Dog Barking
       </tbody>
     </table>
 
-> [!note]
+
+> [!NOTE]
 > Now,C++ programmers tend to use the structures for holding data and classes to hold both the data and funtions.
