@@ -88,8 +88,7 @@
     - Class declaration
     - Class function definition
 6. Example:
-<pre>
-<code>
+```
 #include<bits/stdc++.h>
 using namespace std;
 #define dash for(int i=0;i<30;i++) cout << "-"; cout << "\n";
@@ -160,8 +159,7 @@ int main()
     return 0;
 }
 
-</code>
-</pre>
+```
 
 
 ### 5.4 Defining Member Functions
@@ -174,8 +172,7 @@ int main()
     - Inside the class definition
 
 #### Definition outside of the class
-<pre>
-<code>
+```
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -217,8 +214,7 @@ int main()
     abir.displayInfo();
     return 0;
 }
-</code>
-</pre>
+```
 
 #### Defination inside of the class
 ```
