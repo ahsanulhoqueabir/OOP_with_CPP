@@ -268,36 +268,35 @@ int main()
 An inline function is one for which the compiler copies the code from the function definition directly into the code of the calling function rather than creating a separate set of instructions in memory. Its good only for short function.
 
 <details>
-<summary> Example </summary>
+<summary>Example</summary>
 ```
-#include<bits/stdc++.h>
-using namespace std;
+          #include<bits/stdc++.h>
+          using namespace std; 
+          
+          
+          class Average{
+              public:
+              float a,b;
+              void getdata(float x, float y);
+              void display(){
+                  cout << "Average : " << ((a+b)/2) << endl;
+              }
+          };
 
-class Average{
-    public:
-    float a,b;
+          inline void Average::getdata(float x, float y){
+              a = x;
+              b = y;
+          }
 
-    void getdata(float x, float y);
-    void display(){
-        cout << "Average : " << ((a+b)/2) << endl;
-    }
-};
-
-inline void Average::getdata(float x, float y){
-    a = x;
-    b = y;
-}
-
-int main()
-{
-    Average calc;
-    calc.getdata(10,21);
-    calc.display();
-    return 0;
-}
+          int main()
+          {
+              Average calc;
+              calc.getdata(10,21);
+              calc.display();
+              return 0;
+          }
 ```
 </details>
-
 
 
 
