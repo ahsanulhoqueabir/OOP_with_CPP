@@ -85,7 +85,8 @@
 5. Class specification has 2 parts.
    - Class declaration
    - Class function definition
-6. Example:
+6. <details>
+<summary> Example </summary>
 
 ```
 #include<bits/stdc++.h>
@@ -160,6 +161,12 @@ int main()
 
 ```
 
+</details>
+
+Example:
+
+
+
 ### 5.4 Defining Member Functions
 
 - Several different classes can use same function name. to resolve their scope we justify 'membership label'.
@@ -169,7 +176,8 @@ int main()
   - Outside the clsss definition
   - Inside the class definition
 
-#### Definition outside of the class
+#### <details> 
+<summary> Definition outside of the class </summary>
 
 ```
 #include<bits/stdc++.h>
@@ -214,8 +222,10 @@ int main()
     return 0;
 }
 ```
+</details>
 
-#### Defination inside of the class
+#### <details>
+<summary>Defination inside of the class </summary>
 
 ```
 #include<bits/stdc++.h>
@@ -258,7 +268,7 @@ int main()
     return 0;
 }
 ```
-
+</details>
 ### 5.6 Function Inline
 
 <div>
