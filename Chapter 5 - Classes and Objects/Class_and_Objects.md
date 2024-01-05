@@ -85,7 +85,7 @@
 5. Class specification has 2 parts.
    - Class declaration
    - Class function definition
-   
+
 <details>
 <summary> Example </summary>
 
@@ -163,8 +163,6 @@ int main()
 ```
 
 </details>
-
-Example:
 
 
 
