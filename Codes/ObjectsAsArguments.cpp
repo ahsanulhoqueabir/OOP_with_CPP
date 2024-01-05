@@ -15,7 +15,7 @@ class time{
         }
         //declare with objects as pass by value
         // void sum(time,time); 
-        void sum(const time &t1,const time &t2);
+        void sum( time &t1, time &t2);
 };
 
 // for pass-by-value
@@ -27,7 +27,7 @@ class time{
 // }
 
 // for pass-by-reference
-void time::sum(const time &t1,const time &t2){
+void time::sum( time &t1, time &t2){
     minutes=t1.minutes + t2.minutes;
     hours=minutes/60;
     minutes=minutes%60;

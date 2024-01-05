@@ -697,3 +697,122 @@ int main()
 
 </details>
 
+### 5.15 Friendly Functions
+
+
+1. **Not a Member Function:** A friend function is a standalone function and is not a member of the class for which it is declared as a friend.
+
+2. **Declared with the `friend` Keyword:** To declare a function as a friend of a class, the `friend` keyword is used in the class declaration. This grants the function access to the private and protected members of the class.
+
+3. **Access to Private and Protected Members:** A friend function has the privilege of accessing the private and protected members of the class for which it is declared as a friend. This allows it to read and modify the private and protected data members.
+
+4. **Declared Inside or Outside the Class:** A friend function can be declared inside the class declaration or outside it. If declared inside, it is implicitly inline. Alternatively, it can be declared outside the class.
+
+5. **Does Not Inherit:** Friendship is not mutual or inherited. If class A is a friend of class B, it does not imply that class B is a friend of class A. Friendship is not transitive or symmetric.
+
+6. **Friendship is Not Reciprocal:** If class A is a friend of class B, it does not automatically make class B a friend of class A. Friendship is not reciprocal.
+
+7. **Use with Caution:** While friend functions can be useful in certain situations, they break encapsulation to some extent. Allowing external functions to access private members goes against the principles of encapsulation and data hiding, so the use of friend functions should be done judiciously.
+
+
+<details>
+<summary><b>Example of Friend Function </b></summary>
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+class cse
+{
+    string roll, name;
+    int age;
+
+public:
+    void getdata(string roll, string name, int age)
+    {
+        this->roll = roll;
+        this->name = name;
+        this->age = age;
+    }
+    void display()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Roll: " << roll << endl;
+        cout << "Age: " << age << endl;
+    }
+    friend void update(cse &c);
+};
+
+void update(cse &c)
+{
+    c.roll = "190041234";
+    c.name = "XYZ";
+    c.age = 20;
+}
+int main()
+{
+    cse c;
+    c.getdata("190041234", "ABC", 20);
+    update(c);
+    c.display();
+    return 0;
+}
+
+```
+
+</details>
+
+<details>
+<summary> <b>Example of Friend Class </b></summary>
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+class FriendClass{
+    
+    string privateData;
+
+protected:
+    string protectedData;
+
+public:
+    string publicData;
+
+    void Input(string privateData,string protectedData,string publicData){
+        this->privateData = privateData;
+        this->protectedData = protectedData;
+        this->publicData = publicData;
+    }
+
+
+    friend class FriendClass2;
+};
+
+class FriendClass2{
+    
+    public:
+    void display(FriendClass &obj){
+        // FriendClass obj;
+        cout<<"Private Data: " << obj.privateData << endl;
+        cout<<"Protected Data: " << obj.protectedData << endl;
+        cout<<"Public Data: " << obj.publicData << endl;
+    }
+};
+
+
+
+int main()
+{
+
+    FriendClass example;
+    example.Input("Private Data","Protected Data","Public Data");
+    // Accessing Private Members Using Normal Methods Will Show Errors
+
+    FriendClass2 example2;
+    example2.display(example);
+    return 0;
+}
+
+```
+</details>
