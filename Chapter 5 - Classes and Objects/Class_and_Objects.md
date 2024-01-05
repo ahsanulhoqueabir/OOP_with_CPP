@@ -176,7 +176,8 @@ Example:
   - Outside the clsss definition
   - Inside the class definition
 
-#### <details> 
+
+<details> 
 <summary> Definition outside of the class </summary>
 
 ```
@@ -224,7 +225,7 @@ int main()
 ```
 </details>
 
-#### <details>
+<details>
 <summary>Defination inside of the class </summary>
 
 ```
@@ -269,6 +270,8 @@ int main()
 }
 ```
 </details>
+
+
 ### 5.6 Function Inline
 
 <div>
