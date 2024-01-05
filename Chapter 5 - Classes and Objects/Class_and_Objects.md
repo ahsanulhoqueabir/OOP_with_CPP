@@ -369,8 +369,10 @@ Average of 56 78 23 is: 52.3333
   - **Shared Memory**: Static data members are shared among all instances(objects) of a class.
   - **Memory Allocation** : Memory for a static data member is allocated only once for the entire class, not for each instance of the class. It is allocated when the program starts and deallocated when the program ends.
   - <b>Access Control</b>: Static data members can be private, protected, or public. The access specifier determines their visibility and accessibility from outside the class.
-  - <b> Initialization </b>: <details>
-  <summary>Static data members are typically initialized outside the class definition.</summary>
+  - <b> Initialization </b>: Static data members are typically initialized outside the class definition.
+  
+<details>
+<summary>Example.</summary>
 ```
   #include <bits/stdc++.h>
 using namespace std;
