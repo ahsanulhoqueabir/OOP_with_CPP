@@ -302,7 +302,6 @@ In the above example <code> `void display()` </code> is made as an inline functi
 
 </details>
 
-
 ### 5.7 Nesting of Member Functions
 
 - In C++, member functions can be nested inside another member function or outside the class definition.
@@ -312,7 +311,6 @@ In the above example <code> `void display()` </code> is made as an inline functi
 
 <details>
 <summary> Example </summary>
-
 
 ```
 #include<bits/stdc++.h>
@@ -327,7 +325,7 @@ class collection{
     void display();
 };
 
-// defining functions 
+// defining functions
 void collection::input(){
     cout << "Enter three numbers : ";
     cin >> x >> y >> z;
@@ -348,4 +346,63 @@ int main()
     return 0;
 }
 ```
+
+<blockquote>
+Output:
+Average of 56 78 23 is: 52.3333
+</blockquote>
 </details>
+
+### 5.8 Private Member Functions
+- A private member function can be called only within the class and its friends (classes or functions declared)
+- A member function can be declared as private if it needs to access the private members of a class
+- In C++, all member data are by default private unless they are explicitly declared as protected or public
+- If you declare a member function as private and try to access it from outside the class, the compiler will generate an error because there is no way for code access that member function
+- To allow code outside the class to access a private member function, you need to use friend keyword (friend declaration) or you can use nested member function.
+
+
+### 5.11 Static Data Members
+- If a variable inside a class is declared static, then it belongs to the class itself rather than an instance of that class. It is shared among all objects of the same class.  
+- The value of a static variable remains unchanged even after the program ends and restarts again.
+- It retains its value between different instances of the class.
+- The main characteristics of static data members are-
+  - **Shared Memory**: Static data members are shared among all instances(objects) of a class.
+  - **Memory Allocation** : Memory for a static data member is allocated only once for the entire class, not for each instance of the class. It is allocated when the program starts and deallocated when the program ends.
+  - <b>Access Control</b>: Static data members can be private, protected, or public. The access specifier determines their visibility and accessibility from outside the class.
+  - <b> Initialization </b>: <details>
+  <summary>Static data members are typically initialized outside the class definition.</summary>
+```
+  #include <bits/stdc++.h>
+using namespace std;
+
+class User
+{
+
+public:
+    static int serial; // declaration of static data member. The initial value of static data members is 0. Important!! You cant initialize there.
+
+    string name;
+    User()
+    {
+        cin >> name;
+        serial++;
+        cout << serial << " " << name << endl;
+    }
+};
+
+// Accessing static data member using class name and initializing it. To initialize outside the main function,you have to use type of this data.(eg. int,string)
+int User::serial = 115;
+
+int main()
+{
+    User::serial=55; // this will be used as initial value,though we have declared globally 5.
+    User u1, u2, u3;
+
+    return 0;
+}
+
+```
+</details>
+  
+
+
