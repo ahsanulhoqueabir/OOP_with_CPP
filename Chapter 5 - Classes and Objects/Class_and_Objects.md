@@ -365,6 +365,8 @@ Average of 56 78 23 is: 52.3333
 - If a variable inside a class is declared static, then it belongs to the class itself rather than an instance of that class. It is shared among all objects of the same class.  
 - The value of a static variable remains unchanged even after the program ends and restarts again.
 - It retains its value between different instances of the class.
+- Static members can be accessed using the class name followed by the scope resolution operator (::), while normal members are accessed using the dot operator (.) on an object of the class.
+- Static Variable are non-inline member funtion.
 - The main characteristics of static data members are-
   - **Shared Memory**: Static data members are shared among all instances(objects) of a class.
   - **Memory Allocation** : Memory for a static data member is allocated only once for the entire class, not for each instance of the class. It is allocated when the program starts and deallocated when the program ends.
@@ -393,8 +395,8 @@ public:
     }
 };
 
-// Accessing static data member using class name and initializing it. To initialize outside the main function,you have to use type of this data.(eg. int,string)
-int User::serial = 115;
+// Accessing static data member using class name and fefining and initializing it. To initialize outside the main function,you have to use type of this data.(eg. int,string)
+int User::serial = 115; //defining and initializing
 
 int main()
 {
@@ -407,5 +409,49 @@ int main()
 ```
 </details>
   
+
+### 5.12 Static Member functions
+
+Static member function can access only static data members not non-static data members. They can also access non-static member functions but cannot call them because they don't have a object to call on (they are called without an object).
+
+<details>
+<summary>A static member function is independent of any object of the class. </summary>
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+class StaticMem{
+
+    public:
+    static int count;
+    static void staticFunction(){
+        count++;
+        cout<<"This is a static function"<< " " << count << endl;
+    }
+};
+
+int StaticMem::count; //defining static members
+
+
+int main()
+{
+    StaticMem::staticFunction(); // calling static member function without creating an instance.
+
+    StaticMem Member1;
+    Member1.staticFunction(); // calling after creating instance.
+
+    StaticMem::staticFunction();
+
+    return 0;
+}
+
+// Output:
+// This is a static function 1
+// This is a static function 2
+// This is a static function 3
+```
+</details>
+
 
 

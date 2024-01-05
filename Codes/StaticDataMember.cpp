@@ -17,7 +17,7 @@ public:
 };
 
 // Accessing static data member using class name and initializing it. To initialize outside the main function,you have to use type of this data.(eg. int,string)
-int User::serial = 115;
+int User::serial = 100; //defining and initializing
 
 int main()
 {
