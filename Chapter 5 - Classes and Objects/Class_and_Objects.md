@@ -373,8 +373,9 @@ Average of 56 78 23 is: 52.3333
   
 <details>
 <summary>Example.</summary>
+
 ```
-  #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 class User
