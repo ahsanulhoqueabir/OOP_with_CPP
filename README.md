@@ -1,7 +1,6 @@
 # OOP with CPP
 
-
-![Object Oriented programming](https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/43849751-2c62-4b97-ae3b-e3c796ecd451)
+![Object Oriented programming (1)](https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/4a34e0d6-07cf-49b5-973d-ae95e829373a)
 
 Taking the initiative to solve both the discussed and given homework problems by Aminul sir and the solutions to previous year's question papers is an essential aspect of my learning journey.
 
