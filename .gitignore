@@ -4,3 +4,5 @@
 *.exe
 *.css
 *.bin
+.vscode
+*.vscode

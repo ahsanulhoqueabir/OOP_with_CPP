@@ -1,96 +1,33 @@
-# OOP_with_CPP
+# OOP with CPP
+
+
+![Object Oriented programming](https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/43849751-2c62-4b97-ae3b-e3c796ecd451)
+
 Taking the initiative to solve both the discussed and given homework problems by Aminul sir and the solutions to previous year's question papers is an essential aspect of my learning journey.
-<div>
-<h1> Here i write codes in chronologically </h1> 
-<p > Take input from administrator of a students name and 5 subjects number,then print each of the students CGPA. Do this using CPP's class variable</p>
 
-```
-#include<bits/stdc++.h>
-using namespace std;
-int mx=0;
-class Student 
-{
-    private:
-        string name;
-        double gpa[5];
-        double cgpa;
-
-    public:
-
-    float gp(int a)
-    {
-        float x=0;
-        if(a>=80) x=4;
-        else if(a>=75 and a<80) x=3.75;
-        else if(a>=70 and a<75) x=3.5;
-        else if(a>=65 and a<70) x=3.25;
-        else if(a>=60 and a<65) x=3;
-        else if(a>=55 and a<60) x=2.75;
-        else if(a>=50 and a<55) x=2.5;
-        else if(a>=45 and a<50) x=2.25;
-        else if(a>=40 and a<45) x=2.0;
-        return x;
-    }
-
-    void input() 
-    {
-        cout << "Enter student name: ";
-        // cin >> name;
-        getchar();
-        getline(cin,name);
-        int sz= name.size();
-        mx=max(mx,sz);
-        cout << "Enter Number for 5 subjects:\n";
-        for (int i = 0; i < 5; ++i) 
-        {   
-            cout << "Subject " << i + 1 << ": ";
-            int x; cin >> x;
-            float y = gp(x);
-            gpa[i] =y;
-        }
-    }
-        
-
-    void calculateCGPA() 
-    {
-        double totalGPA = 0.0;
-        for (int i = 0; i < 5; ++i) 
-        {
-            totalGPA += gpa[i];
-        }
-        cgpa = totalGPA / 5.0;
-    }
-
-    void display() 
-    {
-        // cout << "Student Name: " << name << endl;
-        // cout << "CGPA: " << fixed << setprecision(2) << cgpa << endl;
-        int x=name.size();
-        cout << "| " << name << setw(mx-x+10) << fixed << setprecision(2) << "| " << cgpa << " |" << endl;
-    }
-};
-
-int main() {
-    Student students[10];
-    
-    for (int i = 0; i < 10; ++i) {
-        cout << "Enter details for Student " << i + 1 << ":\n";
-        students[i].input();
-        students[i].calculateCGPA();
-    }
-
-    cout << "\nStudent Details:\n \n";
-    cout<< "Student Name" << setw(mx+1) << "CGPA\n\n";
-    for (int i = 0; i < 10; ++i) {
-        students[i].display();
-        cout << endl;
-    }
-    return 0;
-}
-
-```
-
-
-
+<div >
+<table>
+  <thead>
+    <td>Serial</td>
+    <td>Chapter</td>
+    <td>Note</td>
+    <td>Code</td>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Classes and Objects</td>
+      <td>
+        <a href="https://github.com/ahsanulhoqueabir/OOP_with_CPP/blob/main/Chapter%205%20-%20Classes%20and%20Objects/Class_and_Objects.md">
+          <img src="https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/a3dbca2e-a1df-411b-ae72-18df898146c8" alt="note">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/ahsanulhoqueabir/OOP_with_CPP/tree/main/Chapter%205%20-%20Classes%20and%20Objects">
+          <img src="https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/e94524cd-7e06-48c5-9539-fdbe3c21bbc2" alt="code">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 </div>
-

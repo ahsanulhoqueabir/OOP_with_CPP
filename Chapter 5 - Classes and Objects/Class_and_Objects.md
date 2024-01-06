@@ -816,3 +816,15 @@ int main()
 
 ```
 </details>
+
+
+### 5.16 Returning Objects
+
+- It return data as object.
+<details>
+<summary>Code</summary>
+
+```
+
+```
+</details>
