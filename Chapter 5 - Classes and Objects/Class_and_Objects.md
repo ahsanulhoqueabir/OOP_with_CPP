@@ -828,3 +828,60 @@ int main()
 
 ```
 </details>
+
+
+### 5.17 const Member Functions
+- A member function can be declared as a `const` member function if it does not modify the object to which the function belongs. A `const` member function is called on an object that has been declared as `const`. It means we cannot use non-constant members in such functions.
+- A function is declared as const, it can be called on any type of object.
+
+
+### 5.18 Pointer to Members
+- They are used when we want to access a member variable or member function using a pointer rather than an object reference.
+
+<details>
+<summary> See An Example</summary>
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+class Pointers{
+    int x,y;
+
+    public:
+        void input(int x,int y){
+            this->x = x;
+            this->y = y;
+        }
+
+        friend int sum(Pointers &P);
+};
+
+int sum(Pointers &P){
+    int Pointers::*ptr = &Pointers::x;
+    int Pointers::*ptr2 = &Pointers::y;
+
+    Pointers *ptr3 = &P;
+
+    int S = P.*ptr + ptr3->*ptr2;
+    // int s = P.*ptr + P.*ptr2; you can also calculates this way
+
+    return S;
+}
+
+
+int main()
+{
+    Pointers P;
+    P.input(10,20);
+    cout << "Sum of the values is :"<<sum(P)<<endl;
+
+    Pointers *Pptr= &P;
+    Pptr->input(30,40);  //you can take input these way also (*Pptr).input(30, 40);
+    cout << "Sum of the values is :"<<sum(*Pptr)<<endl;
+    
+    return 0;
+}
+
+```
+</details>
