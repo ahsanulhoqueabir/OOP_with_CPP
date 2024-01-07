@@ -159,5 +159,52 @@ int main(){
     obj3.display();
     return 0;
 }
+ 
+```
+
+## 6.5 Constructors with Default Arguments
+
+- A constructor can have default argument values which are used when the user does not provide any value for that particular parameter while creating an object of a class.
+
+## 6.6 Dynamic Initialization of Objects
+
+
+## 6.7 Copy Constructor
 
 ```
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class copyConstructor{
+    int p;
+
+    public:
+    copyConstructor(int p){
+        this->p=p;
+    }
+
+    copyConstructor(copyConstructor & x){
+        p = x.p;
+    }
+
+    void display(){
+        cout << p << endl;
+    }
+};
+
+int main(){
+
+    copyConstructor example(5); // created item and initialized
+
+    copyConstructor example2(example); // copy constructor called and copy item(example) in example1
+
+    example.display();
+    example2.display();
+    
+    return 0;
+}
+
+```
+
+## 6.8 Dynamic Constructor 
