@@ -28,6 +28,20 @@ Taking the initiative to solve both the discussed and given homework problems by
         </a>
       </td>
     </tr>
+     <tr>
+      <td>2</td>
+      <td>Constructors and Destructors</td>
+      <td>
+        <a href="https://github.com/ahsanulhoqueabir/OOP_with_CPP/blob/main/Chapter%206%20-%20Contstructor%20and%20Destructure/ConstructorAndDestructors.md">
+          <img src="https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/a3dbca2e-a1df-411b-ae72-18df898146c8" alt="note">
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/ahsanulhoqueabir/OOP_with_CPP/tree/main/Chapter%206%20-%20Contstructor%20and%20Destructure">
+          <img src="https://github.com/ahsanulhoqueabir/OOP_with_CPP/assets/113261318/e94524cd-7e06-48c5-9539-fdbe3c21bbc2" alt="code">
+        </a>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
