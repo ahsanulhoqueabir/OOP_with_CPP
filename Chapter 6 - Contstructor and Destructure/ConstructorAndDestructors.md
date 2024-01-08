@@ -389,7 +389,7 @@ A destructor is a special member function in C++ that is called automatically wh
 >[!NOTE]
 > It is not possible to define more than one destructor. ` Destructure ` called in decending orders.
 
-<table>
+<details>
 <summary>See an Example </summary>
 
 ```
@@ -439,6 +439,6 @@ int main()
 }
 
 ```
-</table>
+</details>
 
 
