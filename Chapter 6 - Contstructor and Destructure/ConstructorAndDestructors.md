@@ -1,4 +1,4 @@
-# Contructor and Destructure
+<h1 align="center"><b>Constructor and Destructor</b></h1>
 
 ### Characteristics of Constructor 
 
@@ -342,5 +342,103 @@ int main()
 }
 
 ```
+
+## 6.11 Destructure
+
+A destructor is a special member function in C++ that is called automatically when an object goes out of scope or is destroyed. The purpose of a destructor is to clean up any resources used by the object before it gets deleted from memory.
+
+<table>
+  <tr>
+    <th>Characteristic</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><strong>Purpose</strong></td>
+    <td>Destructors in C++ are special member functions responsible for cleaning up resources allocated by an object.</td>
+  </tr>
+  <tr>
+    <td><strong>Name and Syntax</strong></td>
+    <td>The destructor has the same name as the class preceded by a tilde (<code>~</code>). The syntax is <code>~ClassName()</code>.</td>
+  </tr>
+  <tr>
+    <td><strong>No Return Type or Parameters</strong></td>
+    <td>Destructors don't have a return type, and they don't take any parameters. They can't be overloaded with different parameter lists.</td>
+  </tr>
+  <tr>
+    <td><strong>Automatic Invocation</strong></td>
+    <td>Destructors are automatically called when an object goes out of scope or is explicitly deleted using the <code>delete</code> operator. They release resources like memory or close files.</td>
+  </tr>
+  <tr>
+    <td><strong>Order of Execution</strong></td>
+    <td>In a class hierarchy (inheritance), destructors are called in the reverse order of construction. The base class destructor is called first, followed by derived class destructors.</td>
+  </tr>
+  <tr>
+    <td><strong>Implicitly Defined Destructor</strong></td>
+    <td>If a class doesn't explicitly provide a destructor, the compiler generates one implicitly. It does nothing special in terms of resource management.</td>
+  </tr>
+  <tr>
+    <td><strong>Explicitly Defined Destructor</strong></td>
+    <td>If a class manages resources needing cleanup (e.g., dynamic memory), an explicit destructor should be provided to handle that cleanup.</td>
+  </tr>
+  <tr>
+    <td><strong>No Inheritance for Destructors</strong></td>
+    <td>Unlike constructors, destructors can't be inherited or overridden in derived classes. Each class in the hierarchy has its own destructor.</td>
+  </tr>
+</table>
+
+>[!NOTE]
+> It is not possible to define more than one destructor. ` Destructure ` called in decending orders.
+
+<table>
+<summary>See an Example </summary>
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+static int c;
+
+class Test
+{
+public:
+    Test()
+    {
+        ++c;
+        cout << "Constructor called for object " << c << endl;
+    }
+    ~Test()
+    {
+        cout << "Destructor called for object " << c << endl;
+        --c;
+    }
+};
+
+int main()
+{
+    cout << "We are inside main function" << endl;
+    cout << "Creating first object" << endl;
+    cout<<endl;
+    Test t1;
+    {
+        cout<<endl;
+        cout << "Entering first block" << endl;
+        cout << "Creating two more objects" << endl;
+        Test t2, t3;
+        cout<<endl;
+        {
+            cout << "Entering inside first block" << endl;
+            cout << "Creating two more objects" << endl;
+            Test t5, t6;
+            cout << "Exiting this block" << endl;
+        }
+        cout<<endl;
+        cout << "Exiting this block" << endl;
+    }
+    cout << "Exiting main function" << endl;
+
+    return 0;
+}
+
+```
+</table>
 
 
