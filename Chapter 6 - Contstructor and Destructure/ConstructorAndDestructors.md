@@ -208,3 +208,70 @@ int main(){
 ```
 
 ## 6.8 Dynamic Constructor 
+- A dynamic constructor is a special member function of the class that is used to initialize an object dynamically
+- A dynamic constructor is a special member function that is used to initialize an object of the class at runtime, rather than during compile time initialization. It can be invoked by using the new keyword with the name of the class followed by parentheses. The dynamic constructor is also known as a virtual constructor or a runtime constructor.
+- `new` keyword is used to allocate memory dynamically for an object of a class.
+- The dynamic constructor is invoked when we create the object using new operator.
+
+Syntax : `ClassName* objName = new ClassName();`
+
+<details>
+<summary> See an Example </summary>
+
+```
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class String
+{
+    char *name;
+    int len;
+
+public:
+    String()
+    {
+        len = 0;
+        name = NULL;
+    }
+    String(char *s)
+    {
+        len = strlen(s);
+        name = new char[len + 1];
+        strcpy(name, s);
+    }
+    void display()
+    {
+        cout << name << endl;
+    }
+    void join(String &a, String &b);
+};
+void String::join(String &a, String &b)
+{
+    len = a.len + b.len;
+    delete name;
+    name = new char[len + 1];
+    strcpy(name, a.name);
+    strcat(name, b.name);
+}
+
+int main()
+{
+    char *first = "Ahsanul ";
+    String name1(first), name2("Hoque "), name3("Abir "), s1, s2;
+    s1.join(name1, name2);
+    s2.join(s1, name3);
+
+    name1.display();
+    name2.display();
+    name3.display();
+
+    s1.display();
+    s2.display();
+
+    return 0;
+}
+
+```
+
+</details>
