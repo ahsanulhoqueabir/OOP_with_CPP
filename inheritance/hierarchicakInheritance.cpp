@@ -29,6 +29,7 @@ class child2:public Parent{
 int main()
 {
     AHSAN
+    child1 c1;
     child2 c;
     return 0;
 }
